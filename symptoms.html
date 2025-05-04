@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediReach - Symptoms</title>
+  <link rel="stylesheet" href="symptoms.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+<body class="symptoms-body"  method="GET">
+  <header class="navbar">
+    <div class="navbar-logo">MediReach</div>
+    <nav class="navbar-links">
+      <a href="symptoms.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Team</a>
+      <a href="#" class="download-link">Download</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+  <div class="symptoms-container">
+    <h1 class="title">Let us <span class="blue">know!</span></h1>
+    <p class="subtitle">Real Help. Real Doctors. Right Now.</p>
+
+    <form class="symptoms-form" action="available-doctors.html">
+      <label for="patientName">Name of the patient</label>
+      <input type="text" id="patientName" placeholder="Type Here......" required />
+
+      <label>Date of Birth of the patient</label>
+      <div class="dob-fields">
+        <input type="text" placeholder="Date" required />
+        <input type="text" placeholder="Month" required />
+        <input type="text" placeholder="Year" required />
+      </div>
+
+      <label for="symptoms">What Symptoms are you experiencing?</label>
+      <textarea id="symptoms" placeholder="Type Here......" rows="4" required></textarea>
+      <center>
+      <button onclick="" type="submit" class="submit-btn">Submit</button
+    </center>
+    </form>
+  </div>
+
+</body>
+<script>
+  function working(){
+
+    // Redirect to available-doctors.html
+    window.location.href = 'available-doctors.html';}
+ 
+</script>
+</html>

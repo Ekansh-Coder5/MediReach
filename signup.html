@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReach - Real Help. Real Doctors. Right Now.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        
+            
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        body {
+            background-image: url(background-img.png);
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, #0a2a5e 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        /* Curved line effect */
+
+
+        .container {
+            width: 100%;
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links a.signup {
+            color: #0066ff;
+        }
+
+        /* Main content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .brand {
+            font-size: 120px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .brand span {
+            color: #0066ff;
+        }
+
+        .tagline {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Registration form */
+        .registration-card {
+            border-radius: 15px;
+            padding: 30px;
+            width: 2200px;
+            height: 400px;
+            flex-shrink: 0;
+            max-width: 800px;
+            border-radius: 37px;
+            align-content: center;
+border: 1px solid #4B4B4B;
+background: #040404;
+        }
+
+        .registration-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: none;
+            border-radius: 15px;
+border: 1px solid #4B4B4B;
+background: linear-gradient(332deg, rgba(22, 96, 255, 0.70) -39.1%, #000 44.98%);
+            color: white;
+            font-size: 16px;
+        }
+
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .otp-button {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .otp-button:hover {
+            background-color: #0055dd;
+        }
+
+        /* App download buttons */
+        .app-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .app-button {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .app-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Emergency link */
+        .emergency-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .emergency-link a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .emergency-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="curved-line"></div>
+    <div class="container">
+        <nav>
+            <div class="logo">MediReach</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="signup.html" class="signup">SignUp</a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <h1 class="brand">Medi<span>Reach</span></h1>
+            <p class="tagline">Real Help. Real Doctors. Right Now.</p>
+
+            <div class="registration-card">
+                <h2 class="registration-title">Register via Phone or Email ID</h2>
+                <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Enter your Email or Phone ID">
+                </div>
+                <div class="button-container">
+                    <button onclick="" class="otp-button">Send OTP</button>
+                </div>
+                
+                <div class="app-buttons">
+                    <button class="app-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke="white" stroke-width="2"/>
+                            <path d="M12 7v10M7 12h10" stroke="white" stroke-width="2"/>
+                        </svg>
+                        Install on Android
+                    </button>
+                    <button class="app-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke="white" stroke-width="2"/>
+                            <path d="M12 7v10M7 12h10" stroke="white" stroke-width="2"/>
+                        </svg>
+                        Install on iOS
+                    </button>
+                </div>
+                
+                <div class="emergency-link">
+                    <a href="index.html">In an emergency? Click here for instant support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

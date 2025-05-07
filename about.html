@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReach - About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, #0a2a5e 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        /* Curved line effect */
+        .curved-line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M1000,0 Q800,400 400,600 T0,1000" fill="none" stroke="%230055ff" stroke-width="1" opacity="0.2"/></svg>') no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links a.signup {
+            color: #0066ff;
+        }
+
+        /* Main content */
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 0;
+            gap: 40px;
+        }
+
+        .phone-mockup {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-container {
+            position: relative;
+
+            border-radius: 40px;
+            background: linear-gradient(145deg, #333, #222);
+            padding: 10px;
+            border: 2px solid #444;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-screen {
+            width: 706px;
+            height: 1064px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+        }
+
+        .app-logo {
+            font-size: 14px;
+            font-weight: bold;
+            color: #0066ff;
+        }
+
+        .app-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .app-welcome {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .app-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066ff;
+            margin-bottom: 20px;
+        }
+
+        .app-button {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .content-section {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: #0066ff;
+        }
+
+        .section-text {
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* Responsive design */
+
+    </style>
+</head>
+<body>
+    <div class="curved-line"></div>
+    <div class="container">
+        <nav>
+            <div class="logo">MediReach</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="signup.html" class="signup">SignUp</a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            
+                    <div class="phone-screen">
+                        <img src="test.png">
+                    
+            </div>
+
+            <div class="content-section">
+                <h1 class="section-title">What makes <span class="highlight">MediReach</span> stand out?</h1>
+                <p class="section-text">
+                    At MediReach, our approach is centered around providing each user with tailored health guidance, leveraging cutting-edge AI algorithms in order to understand your needs and preferences. With HealthGenie residing in your phone, accessing personalized health insights becomes seamless, empowering you to proactively manage your well-being wherever you go. HealthGenie offers bespoke health guidance by harnessing the power of AI, ensuring that each user receives personalized recommendations and support aligned with their unique health goals.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

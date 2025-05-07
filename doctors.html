@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReach - Doctors Near You</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, #0a2a5e 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        /* Curved line effect */
+        .curved-line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M1000,0 Q800,400 400,600 T0,1000" fill="none" stroke="%230055ff" stroke-width="1" opacity="0.2"/></svg>') no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links a.signup {
+            color: #0066ff;
+        }
+
+        /* Main content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Doctor cards */
+        .doctor-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .doctor-card {
+            border-radius: 29px;
+border: 1px solid #C9C9C9;
+background: #000;
+box-shadow: 0px 4px 43.3px 14px rgba(22, 96, 255, 0.25);
+width: 348px;
+height: 437px;
+flex-shrink: 0;
+justify-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 102, 255, 0.2);
+        }
+
+        .doctor-image {
+            width: 284.114px;
+height: 305.575px;
+flex-shrink: 0;
+border-radius: 29px;
+border: 1px solid #C9C9C9;
+background: #1660FF;
+margin: 30px;
+        }
+
+        .doctor-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .doctor-specialty {
+            font-size: 14px;
+            color: #ff9900;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="curved-line"></div>
+    <div class="container">
+        <nav>
+            <div class="logo">MediReach</div>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="help.html">Help</a>
+                <a href="signup.html" class="signup">SignUp</a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <h1 class="page-title">Doctors near you!</h1>
+            <p class="description">
+                HealthGenie, your smart health assistant, utilizes AI to analyze your health data and offers personalized guidance to help you achieve your wellness goals, all conveniently accessible from your phone.
+            </p>
+
+            <div class="doctor-cards">
+                <div class="doctor-card">
+                    <div class="doctor-image"></div>
+                    <h3 class="doctor-name">Dr. Ekansh Gupta</h3>
+                    <p class="doctor-specialty">MBBS, MD (Internal Medicine)</p>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image"></div>
+                    <h3 class="doctor-name">Dr. Tvisha Nangia</h3>
+                    <p class="doctor-specialty">MD (Family Medicine)</p>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image"></div>
+                    <h3 class="doctor-name">Dr. Namish Oberoi</h3>
+                    <p class="doctor-specialty">MBBS, DNB (General)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

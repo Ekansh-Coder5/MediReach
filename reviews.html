@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReach - Customer Reviews</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Background effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 30%, #0a2a5e 0%, transparent 60%);
+            z-index: -1;
+        }
+
+        /* Curved line effect */
+        .curved-line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M1000,0 Q800,400 400,600 T0,1000" fill="none" stroke="%230055ff" stroke-width="1" opacity="0.2"/></svg>') no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links a.signup {
+            color: #0066ff;
+        }
+
+        /* Main content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 0;
+        }
+
+        .page-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        /* Reviews section */
+        .reviews-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .google-rating {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rating-number {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0066ff;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .google-logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .google-text {
+            font-weight: bold;
+        }
+
+        .rating-summary {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #6c5ce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .reviewer-info {
+            flex: 1;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .review-stars {
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+        .review-text {
+            line-height: 1.5;
+        }
+
+        /* Google logo */
+        .g-logo {
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .g-logo span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: -5px;
+        }
+        .g-blue { background-color: #4285F4; }
+        .g-red { background-color: #EA4335; }
+        .g-yellow { background-color: #FBBC05; }
+        .g-green { background-color: #34A853; }
+    </style>
+</head>
+<body>
+    <div class="curved-line"></div>
+    <div class="container">
+        <nav>
+            <div class="logo">MediReach</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="signup.html" class="signup">SignUp</a>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <h1 class="page-title">See What Customers Say About us!</h1>
+
+            <div class="reviews-container">
+                <div class="google-rating">
+                    <div class="rating-number">4.69</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="google-logo">
+                        <div class="g-logo">
+                            <span class="g-blue"></span>
+                            <span class="g-red"></span>
+                            <span class="g-yellow"></span>
+                            <span class="g-green"></span>
+                        </div>
+                        <span class="google-text">Google Rating</span>
+                    </div>
+                    <div>See all reviews</div>
+                </div>
+
+                <div class="rating-summary">
+                    <div class="stars">★★★★★</div>
+                    <div>4.69 /5 - from 12k reviews</div>
+                    <div class="google-logo">
+                        <div class="g-logo">
+                            <span class="g-blue"></span>
+                            <span class="g-red"></span>
+                            <span class="g-yellow"></span>
+                            <span class="g-green"></span>
+                        </div>
+                        <span>Google</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">SG</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Suhem Gupta</div>
+                            <div class="review-date">Jul 14, 2023</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">It is so good!</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">HS</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Harvey Specter</div>
+                            <div class="review-date">Jul 10, 2023</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Saved my life, Youuu!!</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">SR</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Sigma Ray from India</div>
+                            <div class="review-date">Sept 5, 2023</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">They saved me when she left me. Love them for being there with me. xD</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">GG</div>
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">GoodGamer0911</div>
+                            <div class="review-date">Oct 2, 2023</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <div class="review-text">Truly outstanding! They brought my vision to life better than we ever imagined. A pleasure to work with. Truly outstanding! They brought our vision to life better than we ever imagined. A pleasure to work with.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

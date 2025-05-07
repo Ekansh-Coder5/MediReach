@@ -1,18 +1,16 @@
 function showLoader() {
     const loader = document.querySelector('.loader-container');
+    const body = document.querySelector('body');
+  
     loader.classList.add('show');
-    
+    body.style.visibility = 'hidden';
+  
     setTimeout(() => {
       loader.classList.remove('show');
-    }, 1000);
+      body.style.visibility = 'visible';
+    }, 2000);
   }
-
-  // Show loading animation on initial page load
-  window.addEventListener('load', () => {
-    const loader = document.querySelector('.loader-container');
-    loader.classList.add('show');
-    
-    setTimeout(() => {
-      loader.classList.remove('show');
-    }, 1000);
-  });
+  
+  // On page load
+  window.addEventListener('load', showLoader);
+  
